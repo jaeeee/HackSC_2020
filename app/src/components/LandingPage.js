@@ -26,6 +26,7 @@ import {
   MDBDropdownMenu,
   MDBDropdownItem
 } from "mdbreact";
+import ReactPlayer from "react-player";
 import NavBar from './NavBar';
 export class LandingPage extends Component {
          constructor(props) {
@@ -83,6 +84,11 @@ export class LandingPage extends Component {
                    <MDBCard>
                      <center>
                        <h1>EducateMe</h1>
+                       <h3>Your Stream</h3>
+                       <ReactPlayer
+                         url="https://stream.mux.com/W2dF802Rds01HGlDmUoXvxmi1JIo800684l.m3u8"
+                         playing="true"
+                       />
                        <p>
                          Lorem Ipsum is simply dummy text of the printing and
                          typesetting industry. Lorem Ipsum has been the
