@@ -1,13 +1,20 @@
-import React, { Component } from 'react'
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-export class main extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
-}
+import LandingPage from "./LandingPage.js";
+// import AboutMe from "./aboutme";
+// import Contact from "./contact";
+// import Projects from "./projects";
+// import Resume from "./resume";
 
-export default main
+const Main = () => (
+  <Switch>
+    <Route exact path="/" component={LandingPage} />
+    {/* <Route path="/aboutme" component={AboutMe} />
+    <Route path="/contact" component={Contact} />
+    <Route path="/projects" component={Projects} />
+    <Route path="/resume" component={Resume} /> */}
+  </Switch>
+);
+
+export default Main;
