@@ -175,6 +175,15 @@ export class CurrentStreams extends Component {
                <MDBContainer>
                  <MDBCard>
                    <center>
+                     <MDBBtn
+                       color="green"
+                       type="button"
+                       onClick={this.updateInfo}
+                     >
+                       {/* <MDBIcon icon="video" /> */}
+                       Load Stream
+                     </MDBBtn>
+                     <ReactPlayer url={this.state.streamURL} playing="true" />
                      <MDBInput
                        value={this.state.email}
                        onChange={this.handleChange}
@@ -189,16 +198,13 @@ export class CurrentStreams extends Component {
 
                        //  disabled
                      />
-                      {/* <div className="text-center py-4 mt-3"> */}
-                <MDBBtn color="primary" type="button" onClick={this.updateInfo}>
-                  <MDBIcon icon="edit" />
-                  Update Info
-                </MDBBtn>
+                     {/* <div className="text-center py-4 mt-3"> */}
+
                      {/* <h3>Current streams here!</h3> */}
                      <h4>Title: {this.state.streamTitle}</h4>
                      <h5>Description: {this.state.streamDescription}</h5>
                      <h6>Category: {this.state.streamCategory}</h6>
-                     <ReactPlayer url={this.state.streamURL} playing="true" />
+
                      <p></p>
                    </center>
                  </MDBCard>
