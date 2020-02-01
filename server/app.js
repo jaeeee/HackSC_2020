@@ -7,7 +7,7 @@ var cors = require("cors");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var testAPIRouter = require("./routes/testAPI");
+var streamLiveRouter = require("./routes/streamLive");
 
 var app = express();
 
@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 //USING FOR TESTING
-app.use("/testAPI", testAPIRouter);
+app.use("/streamLive", streamLiveRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

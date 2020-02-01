@@ -46,7 +46,7 @@ export class LandingPage extends Component {
         //  }
 
          callAPI() {
-           fetch("http://localhost:9000/testAPI")
+           fetch("http://localhost:9000/streamLive")
              .then(res => res.text())
              .then(res => this.setState({ apiResponse: res }));
          }
