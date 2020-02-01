@@ -5,8 +5,8 @@ const Mux = require('@mux/mux-node');
 const  {Video, Data} = new Mux();
 
 const asset  = await Vide.Assets.create({
-  input: ""
-})
+  input: "",
+});
 
 app.get("/", function(req, res, next) {
     res.send("fDNFIAFMDI");
