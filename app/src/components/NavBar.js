@@ -20,7 +20,7 @@ export class NavBar extends Component {
         return (
           <div>
             {/* // <div> */}
-            <MDBNavbar color="" dark expand="md">
+            <MDBNavbar color="dark-green" dark expand="md">
               <MDBNavbarBrand>
                 <strong className="white-text"> EducateMe</strong>{" "}
                 <MDBIcon icon="apple-alt" />
