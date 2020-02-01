@@ -8,7 +8,92 @@ import {
   MDBCard,
   MDBCardBody
 } from "mdbreact";
+import { db } from "../config/firebase";
+import fire from "../config/firebase";
 export class Profile extends Component {
+  _isMounted = false;
+  constructor() {
+    super();
+    this.updateInfo = this.updateInfo.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    //  this.logout = this.logout.bind(this);
+    this.state = {
+      //  budget: "",
+      //  bio: "",
+      //  focus: "",
+      //  display_budget: "",
+      streamKey: ""
+    };
+  }
+  handleChange(e) {
+    console.log(e.target.value);
+    // console.log(e.target.name);
+    if (this._isMounted) {
+      this.setState({ [e.target.name]: e.target.value });
+    }
+    //    console.log(this.state.name);
+  }
+
+  updateInfo(e) {
+    var docRef = db.collection("users").doc(fire.auth().currentUser.email);
+    docRef
+      .update({
+        streamKey: this.state.streamKey
+      })
+      .then(function() {
+        alert("UPDATE DONE");
+      })
+      .catch(function(error) {
+        alert("something went wrong..");
+      });
+  }
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
+  componentDidMount() {
+    this._isMounted = true;
+
+    let currentComp = this;
+
+    fire.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        var found = 0;
+        var userRef = db.collection("users").doc(fire.auth().currentUser.email);
+        var username = fire.auth().currentUser.email;
+        userRef.onSnapshot(
+          {
+            includeMetadataChanges: true
+          },
+          function(doc) {
+            try {
+              //    if (this._isMounted) {
+
+              currentComp.setState({
+                //  budget: doc.data().budget,
+                //  bio: doc.data().bio,
+                //  focus: doc.data().focus,
+                //  name: doc.data().name
+                streamKey: doc.data().streamKey
+              });
+              // }
+            } catch (error) {
+              console.log("We getting an error: ", error); // ADD back later
+              found = 0;
+            }
+          }
+        );
+
+        if (found == 1) {
+          //console.log("does hit this")
+        } else {
+          currentComp.setState({
+            budget: ["N/A"]
+          });
+        }
+      }
+    });
+  }
+
   render() {
     return (
       <div
@@ -22,8 +107,8 @@ export class Profile extends Component {
         <MDBContainer>
           <MDBCard>
             <center>
-              <h3>Profile Settings here!</h3>
-              <p>
+              <h3>Update Profile Settings here!</h3>
+              {/* <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
@@ -34,7 +119,25 @@ export class Profile extends Component {
                 containing Lorem Ipsum passages, and more recently with desktop
                 publishing software like Aldus PageMaker including versions of
                 Lorem Ipsum.
-              </p>
+              </p> */}
+              <MDBInput
+                value={this.state.streamKey}
+                onChange={this.handleChange}
+                label="Stream Key"
+                //  icon="envelope"
+                group
+                name="streamKey"
+                type="text"
+                //  validate
+                error="wrong"
+                success="right"
+                //  disabled
+              />
+              <div className="text-center py-4 mt-3">
+                <MDBBtn color="primary" type="button" onClick={this.updateInfo}>
+                  Update Info
+                </MDBBtn>
+              </div>
             </center>
           </MDBCard>
         </MDBContainer>
