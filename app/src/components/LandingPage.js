@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import Router from 'react-router';
 import { BrowserRouter as Router } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 import fire from "../config/firebase";
 import {
   MDBContainer,
@@ -41,7 +41,7 @@ export class LandingPage extends Component {
       //   height: "100vh"
       // }}
       >
-        <Router>
+        {/* <Router> */}
           <MDBNavbar color="indigo" dark expand="md">
             <MDBNavbarBrand>
               <strong className="white-text">EducateMe</strong>
@@ -53,7 +53,9 @@ export class LandingPage extends Component {
                 <MDBNavLink to="#!">Home</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to="#!">PlaceHolder</MDBNavLink>
+                {/* <Link to="/streams">About Me</Link> */}
+
+                <MDBNavLink  to={'/streams' }>Streams</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
                 <MDBNavLink to="#!">Bruh</MDBNavLink>
@@ -61,7 +63,7 @@ export class LandingPage extends Component {
             </MDBNavbarNav>
             {/* </MDBCollapse> */}
           </MDBNavbar>
-        </Router>
+        {/* </Router> */}
         <div
           style={{
             display: "flex",
