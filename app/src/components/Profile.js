@@ -16,13 +16,15 @@ export class Profile extends Component {
     super();
     this.updateInfo = this.updateInfo.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.generateKey = this.generateKey.bind(this);
     //  this.logout = this.logout.bind(this);
     this.state = {
       //  budget: "",
       //  bio: "",
       //  focus: "",
       //  display_budget: "",
-      streamKey: ""
+      streamKey: "",
+      playbackID: ""
     };
   }
   handleChange(e) {
@@ -38,7 +40,8 @@ export class Profile extends Component {
     var docRef = db.collection("users").doc(fire.auth().currentUser.email);
     docRef
       .update({
-        streamKey: this.state.streamKey
+        streamKey: this.state.streamKey,
+        playbackID: this.state.playbackID
       })
       .then(function() {
         alert("UPDATE DONE");
@@ -47,6 +50,23 @@ export class Profile extends Component {
         alert("something went wrong..");
       });
   }
+
+  // fetch('/streamLive', { method: 'POST'}).then((res) => res.json()).then(console.log).catch(console.error)
+  generateKey = () => {
+    // callAPI() {
+    fetch("http://localhost:9000/streamLive", {
+      method: "POST"
+    })
+      .then(res => res.json())
+      .then(data =>
+        this.setState({
+          streamKey: data.stream_key,
+          playbackID: data.playbackid
+        })
+      );
+    this.updateInfo();
+  };
+
   componentWillUnmount() {
     this._isMounted = false;
   }
@@ -73,7 +93,8 @@ export class Profile extends Component {
                 //  bio: doc.data().bio,
                 //  focus: doc.data().focus,
                 //  name: doc.data().name
-                streamKey: doc.data().streamKey
+                streamKey: doc.data().streamKey,
+                playbackID: doc.data().playbackID
               });
               // }
             } catch (error) {
@@ -131,11 +152,33 @@ export class Profile extends Component {
                 //  validate
                 error="wrong"
                 success="right"
+                disabled
+                //  disabled
+              />
+              <MDBInput
+                value={this.state.playbackID}
+                onChange={this.handleChange}
+                label="Playback ID"
+                //  icon="envelope"
+                group
+                name="playbackID"
+                type="text"
+                //  validate
+                error="wrong"
+                success="right"
+                disabled
                 //  disabled
               />
               <div className="text-center py-4 mt-3">
                 <MDBBtn color="primary" type="button" onClick={this.updateInfo}>
                   Update Info
+                </MDBBtn>
+                <MDBBtn
+                  color="warning"
+                  type="button"
+                  onClick={this.generateKey}
+                >
+                  Generate Key
                 </MDBBtn>
               </div>
             </center>

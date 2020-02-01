@@ -32,7 +32,7 @@ export class LandingPage extends Component {
          constructor(props) {
            super(props);
            this.state = { apiResponse: "default testAPI state" };
-           this.callAPI = this.callAPI.bind(this);
+          //  this.callAPI = this.callAPI.bind(this);
            this.logout = this.logout.bind(this);
          }
 
@@ -46,14 +46,14 @@ export class LandingPage extends Component {
         //      .catch(error => alert(error));
         //  }
 
-         callAPI() {
-           fetch("http://localhost:9000/streamLive")
-             .then(res => res.text())
-             .then(res => this.setState({ apiResponse: res }));
-         }
+        //  callAPI() {
+        //    fetch("http://localhost:9000/streamLive")
+        //      .then(res => res.text())
+        //      .then(res => this.setState({ apiResponse: res }));
+        //  }
 
          componentWillMount() {
-           this.callAPI();
+          //  this.callAPI();
          }
 
          logout() {
