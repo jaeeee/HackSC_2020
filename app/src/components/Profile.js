@@ -6,7 +6,8 @@ import {
   MDBInput,
   MDBBtn,
   MDBCard,
-  MDBCardBody
+  MDBCardBody,
+  MDBIcon
 } from "mdbreact";
 import { db } from "../config/firebase";
 import fire from "../config/firebase";
@@ -231,6 +232,7 @@ export class Profile extends Component {
 
               <div className="text-center py-4 mt-3">
                 <MDBBtn color="primary" type="button" onClick={this.updateInfo}>
+                  <MDBIcon icon="edit" />
                   Update Info
                 </MDBBtn>
                 <MDBBtn
@@ -238,10 +240,10 @@ export class Profile extends Component {
                   type="button"
                   onClick={this.generateKey}
                 >
+                  <MDBIcon icon="key" />
                   Generate Key
                 </MDBBtn>
-                <MDBBtn
-                  color="success" type="button" onClick={this.logout}>
+                <MDBBtn color="success" type="button" onClick={this.logout}>
                   Logout
                 </MDBBtn>
               </div>

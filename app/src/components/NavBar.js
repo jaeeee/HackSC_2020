@@ -11,7 +11,8 @@ import {
   MDBDropdown,
   MDBDropdownToggle,
   MDBDropdownMenu,
-  MDBDropdownItem
+  MDBDropdownItem,
+  MDBIcon
 } from "mdbreact";
 
 export class NavBar extends Component {
@@ -19,29 +20,42 @@ export class NavBar extends Component {
         return (
           <div>
             {/* // <div> */}
-            <MDBNavbar color="indigo" dark expand="md">
+            <MDBNavbar color="" dark expand="md">
               <MDBNavbarBrand>
-                <strong className="white-text">EducateMe</strong>
+                <strong className="white-text"> EducateMe</strong>{" "}
+                <MDBIcon icon="apple-alt" />
               </MDBNavbarBrand>
               <MDBNavbarToggler onClick={this.toggleCollapse} />
               {/* <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar> */}
               <MDBNavbarNav left>
                 <MDBNavItem>
-                  <MDBNavLink to="../">Home</MDBNavLink>
+                  <MDBNavLink to="../">
+                    <MDBIcon icon="home" />
+                    Home
+                  </MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
                   {/* <Link to="/streams">About Me</Link> */}
 
-                  <MDBNavLink to={"/streams"}>Streams</MDBNavLink>
+                  <MDBNavLink to={"/streams"}>
+                    <MDBIcon icon="video" />
+                    Streams
+                  </MDBNavLink>
                 </MDBNavItem>
                 {/* <MDBNavItem>
                   <MDBNavLink to="/categories">Categories</MDBNavLink>
                 </MDBNavItem> */}
                 <MDBNavItem>
-                  <MDBNavLink to="/profile">Profile</MDBNavLink>
+                  <MDBNavLink to="/profile">
+                    <MDBIcon icon="user-edit" />
+                    Profile
+                  </MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <MDBNavLink to="/guide">Guide</MDBNavLink>
+                  <MDBNavLink to="/guide">
+                    <MDBIcon icon="clipboard-list" />
+                    Guide
+                  </MDBNavLink>
                 </MDBNavItem>
               </MDBNavbarNav>
               {/* </div> */}
