@@ -27,6 +27,26 @@ import {
   MDBDropdownItem
 } from "mdbreact";
 export class LandingPage extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { apiResponse: "default testAPI state" };
+    this.callAPI = this.callAPI.bind(this);
+    this.logout = this.logout.bind(this);
+  }
+
+  callAPI() {
+      fetch("http://localhost:9000/testAPI")
+          .then(() => alert("passed thru"))// testing
+          .then(res => res.text()) //testing
+          .then(res => this.setState({ apiResponse: "yes" }))
+          .catch(error => alert(error));
+  }
+
+  componentWillMount() {
+      this.callAPI();
+  }
+
   logout() {
     fire.auth().signOut();
   }
@@ -90,6 +110,12 @@ export class LandingPage extends Component {
               <MDBBtn onClick={this.logout}>Logout</MDBBtn>
             </MDBCard>
           </MDBContainer>
+
+          <p className="App-intro">
+
+            {this.state.apiResponse}
+          </p>
+
         </div>
       </div>
     );

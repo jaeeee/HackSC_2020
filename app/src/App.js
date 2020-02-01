@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./App.css";
-import Main from './components/Main';
+import Main from './components/main';
 import fire from './config/firebase';
 import {db} from './config/firebase';
 import Login from './components/Login';
@@ -17,12 +17,14 @@ export class App extends Component {
     };
     this.authListener = this.authListener.bind(this);
   }
+
   render() {
     return (
       <div
       >
         {this.state.user ? <Main /> : <Login />}
       </div>
+
     );
   }
 
@@ -43,7 +45,7 @@ export class App extends Component {
         localStorage.removeItem("user");
       }
     })
-    
+
   }
 
 }
