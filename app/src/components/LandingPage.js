@@ -26,6 +26,7 @@ import {
   MDBDropdownMenu,
   MDBDropdownItem
 } from "mdbreact";
+import NavBar from './NavBar';
 export class LandingPage extends Component {
   logout() {
     fire.auth().signOut();
@@ -42,28 +43,7 @@ export class LandingPage extends Component {
       // }}
       >
         {/* <Router> */}
-          <MDBNavbar color="indigo" dark expand="md">
-            <MDBNavbarBrand>
-              <strong className="white-text">EducateMe</strong>
-            </MDBNavbarBrand>
-            <MDBNavbarToggler onClick={this.toggleCollapse} />
-            {/* <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar> */}
-            <MDBNavbarNav left>
-              <MDBNavItem active>
-                <MDBNavLink to="#!">Home</MDBNavLink>
-              </MDBNavItem>
-              <MDBNavItem>
-                {/* <Link to="/streams">About Me</Link> */}
-
-                <MDBNavLink  to={'/streams' }>Streams</MDBNavLink>
-              </MDBNavItem>
-              <MDBNavItem>
-                <MDBNavLink to="#!">Bruh</MDBNavLink>
-              </MDBNavItem>
-            </MDBNavbarNav>
-            {/* </MDBCollapse> */}
-          </MDBNavbar>
-        {/* </Router> */}
+       {/* <NavBar /> */}
         <div
           style={{
             display: "flex",
