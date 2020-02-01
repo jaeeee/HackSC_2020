@@ -8,6 +8,12 @@
   flex-direction: column;
 }
 
+body {
+  background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  /* background: linear-gradient(#e66465, #9198e5); */
+}
+
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   /* background-color: #F8B0B1; */
