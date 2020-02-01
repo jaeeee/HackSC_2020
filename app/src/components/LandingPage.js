@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import Router from 'react-router';
 import { BrowserRouter as Router } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 import fire from "../config/firebase";
 import {
   MDBContainer,
@@ -26,6 +26,7 @@ import {
   MDBDropdownMenu,
   MDBDropdownItem
 } from "mdbreact";
+import NavBar from './NavBar';
 export class LandingPage extends Component {
 
   constructor(props) {
@@ -61,27 +62,8 @@ export class LandingPage extends Component {
       //   height: "100vh"
       // }}
       >
-        <Router>
-          <MDBNavbar color="indigo" dark expand="md">
-            <MDBNavbarBrand>
-              <strong className="white-text">EducateMe</strong>
-            </MDBNavbarBrand>
-            <MDBNavbarToggler onClick={this.toggleCollapse} />
-            {/* <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar> */}
-            <MDBNavbarNav left>
-              <MDBNavItem active>
-                <MDBNavLink to="#!">Home</MDBNavLink>
-              </MDBNavItem>
-              <MDBNavItem>
-                <MDBNavLink to="#!">PlaceHolder</MDBNavLink>
-              </MDBNavItem>
-              <MDBNavItem>
-                <MDBNavLink to="#!">Bruh</MDBNavLink>
-              </MDBNavItem>
-            </MDBNavbarNav>
-            {/* </MDBCollapse> */}
-          </MDBNavbar>
-        </Router>
+        {/* <Router> */}
+       {/* <NavBar /> */}
         <div
           style={{
             display: "flex",
