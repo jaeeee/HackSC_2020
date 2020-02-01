@@ -5,7 +5,9 @@ import {
   MDBCol,
   MDBInput,
   MDBBtn,
-  MDBCard,
+  MDBCard, 
+  MDBCardText,
+  MDBCardTitle,
   MDBCardBody
 } from "mdbreact";
 
@@ -23,6 +25,11 @@ export class Guide extends Component {
             <MDBContainer>
               <MDBCard>
                 <center>
+                  <MDBCardTitle>Card title</MDBCardTitle>
+                  <MDBCardText>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card&apos;s content.
+                  </MDBCardText>
                   <h3>Guide here!</h3>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
@@ -40,7 +47,7 @@ export class Guide extends Component {
               </MDBCard>
             </MDBContainer>
           </div>
-        )
+        );
     }
 }
 

@@ -35,6 +35,7 @@ export class CurrentStreams extends Component {
           var blah = "";
           blah = "https://stream.mux.com" + this.state.playbackID +  ".m3u8"; 
            this.setState({streamURL: blah});
+           console.log(this.state.streamURL);
          }
 
           componentWillUnmount() {

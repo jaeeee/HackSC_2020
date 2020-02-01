@@ -47,7 +47,12 @@ export class SignUp extends Component {
       .doc(`/users/${this.state.email}`)
       .set({
         name: this.state.name,
-        password: this.state.password
+        password: this.state.password,
+        streamKey: null,
+        playbackID: null,
+        streamTitle: null,
+        streamDescription: null,
+        streamCategory: null
         // wallet: 1000
       });
   }
