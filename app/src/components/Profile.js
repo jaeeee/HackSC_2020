@@ -24,7 +24,10 @@ export class Profile extends Component {
       //  focus: "",
       //  display_budget: "",
       streamKey: "",
-      playbackID: ""
+      streamDescription: "",
+      playbackID: "",
+      streamTitle: "",
+      streamCategory: ""
     };
   }
   handleChange(e) {
@@ -41,7 +44,10 @@ export class Profile extends Component {
     docRef
       .update({
         streamKey: this.state.streamKey,
-        playbackID: this.state.playbackID
+        playbackID: this.state.playbackID,
+        streamTitle: this.state.streamTitle,
+        streamDescription: this.state.streamDescription,
+        streamCategory: this.state.streamCategory
       })
       .then(function() {
         alert("UPDATE DONE");
@@ -98,7 +104,10 @@ export class Profile extends Component {
                 //  focus: doc.data().focus,
                 //  name: doc.data().name
                 streamKey: doc.data().streamKey,
-                playbackID: doc.data().playbackID
+                streamDescription: doc.data().streamDescription,
+                playbackID: doc.data().playbackID,
+                streamTitle: doc.data().streamTitle,
+                streamCategory: doc.data().streamCategory
               });
               // }
             } catch (error) {
@@ -146,6 +155,48 @@ export class Profile extends Component {
                 Lorem Ipsum.
               </p> */}
               <MDBInput
+                value={this.state.streamTitle}
+                onChange={this.handleChange}
+                label="Stream Title"
+                //  icon="envelope"
+                group
+                name="streamTitle"
+                type="text"
+                //  validate
+                error="wrong"
+                success="right"
+                required
+                //  disabled
+              />
+              <MDBInput
+                value={this.state.streamDescription}
+                onChange={this.handleChange}
+                label="Stream Description"
+                //  icon="envelope"
+                group
+                name="streamDescription"
+                type="text"
+                //  validate
+                error="wrong"
+                success="right"
+                required
+                //  disabled
+              />
+              <MDBInput
+                value={this.state.streamCategory}
+                onChange={this.handleChange}
+                label="Stream Category"
+                //  icon="envelope"
+                group
+                name="streamCategory"
+                type="text"
+                //  validate
+                error="wrong"
+                success="right"
+                required
+                //  disabled
+              />
+              <MDBInput
                 value={this.state.streamKey}
                 onChange={this.handleChange}
                 label="Stream Key"
@@ -173,6 +224,7 @@ export class Profile extends Component {
                 disabled
                 //  disabled
               />
+
               <div className="text-center py-4 mt-3">
                 <MDBBtn color="primary" type="button" onClick={this.updateInfo}>
                   Update Info
