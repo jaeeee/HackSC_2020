@@ -53,6 +53,10 @@ export class Profile extends Component {
 
   // fetch('/streamLive', { method: 'POST'}).then((res) => res.json()).then(console.log).catch(console.error)
   generateKey = () => {
+    if (this.state.streamKey != null) {
+      alert("You already have a stream key.");
+      return;
+    }
     // callAPI() {
     fetch("http://localhost:9000/streamLive", {
       method: "POST"
