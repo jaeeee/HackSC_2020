@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/HackSC_2020/app/static/css/main.ed0c49bd.chunk.css",
-    "main.js": "/HackSC_2020/app/static/js/main.05fc156c.chunk.js",
-    "main.js.map": "/HackSC_2020/app/static/js/main.05fc156c.chunk.js.map",
-    "runtime-main.js": "/HackSC_2020/app/static/js/runtime-main.7ffb40c3.js",
-    "runtime-main.js.map": "/HackSC_2020/app/static/js/runtime-main.7ffb40c3.js.map",
-    "static/css/2.9615aa3c.chunk.css": "/HackSC_2020/app/static/css/2.9615aa3c.chunk.css",
-    "static/js/2.48c9e8f8.chunk.js": "/HackSC_2020/app/static/js/2.48c9e8f8.chunk.js",
-    "static/js/2.48c9e8f8.chunk.js.map": "/HackSC_2020/app/static/js/2.48c9e8f8.chunk.js.map",
-    "index.html": "/HackSC_2020/app/index.html",
-    "precache-manifest.37de4cb3acfa145ccf932738d7735dcf.js": "/HackSC_2020/app/precache-manifest.37de4cb3acfa145ccf932738d7735dcf.js",
-    "service-worker.js": "/HackSC_2020/app/service-worker.js",
-    "static/css/2.9615aa3c.chunk.css.map": "/HackSC_2020/app/static/css/2.9615aa3c.chunk.css.map",
-    "static/css/main.ed0c49bd.chunk.css.map": "/HackSC_2020/app/static/css/main.ed0c49bd.chunk.css.map",
-    "static/js/2.48c9e8f8.chunk.js.LICENSE.txt": "/HackSC_2020/app/static/js/2.48c9e8f8.chunk.js.LICENSE.txt",
-    "static/media/mdb.css": "/HackSC_2020/app/static/media/arrow_right.8ef6a08c.svg",
-    "static/media/all.min.css": "/HackSC_2020/app/static/media/fa-solid-900.f6121be5.woff2"
+    "main.css": "/HackSC_2020/static/css/main.ed0c49bd.chunk.css",
+    "main.js": "/HackSC_2020/static/js/main.be0a95a3.chunk.js",
+    "main.js.map": "/HackSC_2020/static/js/main.be0a95a3.chunk.js.map",
+    "runtime-main.js": "/HackSC_2020/static/js/runtime-main.303a5f82.js",
+    "runtime-main.js.map": "/HackSC_2020/static/js/runtime-main.303a5f82.js.map",
+    "static/css/2.68b02c5c.chunk.css": "/HackSC_2020/static/css/2.68b02c5c.chunk.css",
+    "static/js/2.64c0065b.chunk.js": "/HackSC_2020/static/js/2.64c0065b.chunk.js",
+    "static/js/2.64c0065b.chunk.js.map": "/HackSC_2020/static/js/2.64c0065b.chunk.js.map",
+    "index.html": "/HackSC_2020/index.html",
+    "precache-manifest.c0b14e26e13c2665b2afea7434549a6c.js": "/HackSC_2020/precache-manifest.c0b14e26e13c2665b2afea7434549a6c.js",
+    "service-worker.js": "/HackSC_2020/service-worker.js",
+    "static/css/2.68b02c5c.chunk.css.map": "/HackSC_2020/static/css/2.68b02c5c.chunk.css.map",
+    "static/css/main.ed0c49bd.chunk.css.map": "/HackSC_2020/static/css/main.ed0c49bd.chunk.css.map",
+    "static/js/2.64c0065b.chunk.js.LICENSE.txt": "/HackSC_2020/static/js/2.64c0065b.chunk.js.LICENSE.txt",
+    "static/media/mdb.css": "/HackSC_2020/static/media/arrow_right.8ef6a08c.svg",
+    "static/media/all.min.css": "/HackSC_2020/static/media/fa-solid-900.f6121be5.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.7ffb40c3.js",
-    "static/css/2.9615aa3c.chunk.css",
-    "static/js/2.48c9e8f8.chunk.js",
+    "static/js/runtime-main.303a5f82.js",
+    "static/css/2.68b02c5c.chunk.css",
+    "static/js/2.64c0065b.chunk.js",
     "static/css/main.ed0c49bd.chunk.css",
-    "static/js/main.05fc156c.chunk.js"
+    "static/js/main.be0a95a3.chunk.js"
   ]
 }
