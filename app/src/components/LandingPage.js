@@ -97,7 +97,7 @@ export class LandingPage extends Component {
                    </MDBCard>
                  </MDBContainer>
 
-                 <p className="App-intro">{this.state.apiResponse}</p>
+                 {/* <p className="App-intro">{this.state.apiResponse}</p> */}
                </div>
              </div>
            );
