@@ -37,10 +37,12 @@ export class LandingPage extends Component {
   }
 
   callAPI() {
+    console.log("sup");
       fetch("http://localhost:9000/testAPI")
           .then(() => alert("passed thru"))// testing
-          .then(res => res.text()) //testing
-          .then(res => this.setState({ apiResponse: "yes" }))
+          // .then(res => res) //testing
+          .then(res => this.setState({ apiResponse: res }))
+          // console.log(res)
           .catch(error => alert(error));
   }
 
