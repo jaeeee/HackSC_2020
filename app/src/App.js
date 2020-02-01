@@ -37,7 +37,7 @@ export class App extends Component {
         
           {/* </MDBCollapse> */}
         {/* /</div></MDBNavbar> */}
-        {this.state.user ? <NavBar /> : "Hello" }
+        {this.state.user ? <NavBar /> : "" }
         {this.state.user ? 
         // <MDBNavbar color="indigo" dark expand="md">
         //   <MDBNavbarBrand>
