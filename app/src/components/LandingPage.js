@@ -84,9 +84,12 @@ export class LandingPage extends Component {
                    <MDBCard>
                      <center>
                        <h1>EducateMe</h1>
-                       <h3>Free interactive live streams for educators and students</h3>
+                       <h3>
+                         Free interactive live streams for educators and
+                         students
+                       </h3>
                        <ReactPlayer
-                         url="https://stream.mux.com/W2dF802Rds01HGlDmUoXvxmi1JIo800684l.m3u8"
+                         url="https://stream.mux.com/VOyYAIXDgyPVGylxN00GJ01edJAhBUlAkS.m3u8"
                          playing="true"
                        />
                        <p>
