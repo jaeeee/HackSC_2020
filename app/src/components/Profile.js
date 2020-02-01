@@ -128,6 +128,10 @@ export class Profile extends Component {
     });
   }
 
+  logout() {
+    fire.auth().signOut();
+  }
+
   render() {
     return (
       <div
@@ -141,7 +145,7 @@ export class Profile extends Component {
         <MDBContainer>
           <MDBCard>
             <center>
-              <h3>Update Profile Settings here!</h3>
+              <h3>Stream Configurations</h3>
               {/* <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
@@ -235,6 +239,10 @@ export class Profile extends Component {
                   onClick={this.generateKey}
                 >
                   Generate Key
+                </MDBBtn>
+                <MDBBtn
+                  color="success" type="button" onClick={this.logout}>
+                  Logout
                 </MDBBtn>
               </div>
             </center>

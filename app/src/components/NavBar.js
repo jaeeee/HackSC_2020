@@ -34,9 +34,9 @@ export class NavBar extends Component {
 
                   <MDBNavLink to={"/streams"}>Streams</MDBNavLink>
                 </MDBNavItem>
-                <MDBNavItem>
+                {/* <MDBNavItem>
                   <MDBNavLink to="/categories">Categories</MDBNavLink>
-                </MDBNavItem>
+                </MDBNavItem> */}
                 <MDBNavItem>
                   <MDBNavLink to="/profile">Profile</MDBNavLink>
                 </MDBNavItem>
