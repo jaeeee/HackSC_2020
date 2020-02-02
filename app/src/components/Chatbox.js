@@ -19,8 +19,8 @@ class Chatbox extends Component {
     super();
     this.state = {
       messages: [],
-      user: {},
-      isAuthenticated: false
+      user: "",
+      isAuthenticated: false,
     };
   }
 
@@ -171,10 +171,10 @@ class Chatbox extends Component {
     return (
       <div style={styles.container}>
         {/* {this.renderPopup()} */}
-        <div style={styles.channelList}>
-          {this.renderChannelsHeader()}
-          {this.renderChannels()}
-        </div>
+        {/* <div style={styles.channelList}> */}
+          {/* {this.renderChannelsHeader()} */}
+          {/* {this.renderChannels()} */}
+        {/* </div> */}
         <div style={styles.chat}>
           {this.renderChatHeader()}
           {this.renderChat()}

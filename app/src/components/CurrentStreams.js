@@ -277,16 +277,21 @@ export class CurrentStreams extends Component {
             </center>
           </MDBCard>
         </MDBContainer>
-        <MDBCard
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            // height: "30vh"
-          }}
-        >
-          <Chatbox />
-        </MDBCard>
+        <MDBContainer>
+          <div className="w-85 p-20">
+          <MDBCard
+            style={{
+              // display: "flex",
+              // justifyContent: "center",
+              alignItems: "left"
+              // height: "10vh"
+            }}
+          >
+            <Chatbox />
+          </MDBCard>
+          </div>
+        </MDBContainer>
+        /
       </div>
     );
   }
