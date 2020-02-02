@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/HackSC_2020/static/css/main.fa0af7ce.chunk.css",
-    "main.js": "/HackSC_2020/static/js/main.65e78d9c.chunk.js",
-    "main.js.map": "/HackSC_2020/static/js/main.65e78d9c.chunk.js.map",
-    "runtime-main.js": "/HackSC_2020/static/js/runtime-main.303a5f82.js",
-    "runtime-main.js.map": "/HackSC_2020/static/js/runtime-main.303a5f82.js.map",
-    "static/css/2.7441e725.chunk.css": "/HackSC_2020/static/css/2.7441e725.chunk.css",
-    "static/js/2.574cbb75.chunk.js": "/HackSC_2020/static/js/2.574cbb75.chunk.js",
-    "static/js/2.574cbb75.chunk.js.map": "/HackSC_2020/static/js/2.574cbb75.chunk.js.map",
-    "index.html": "/HackSC_2020/index.html",
-    "precache-manifest.4f4eae40a612f49301a6d3304deb52f9.js": "/HackSC_2020/precache-manifest.4f4eae40a612f49301a6d3304deb52f9.js",
-    "service-worker.js": "/HackSC_2020/service-worker.js",
-    "static/css/2.7441e725.chunk.css.map": "/HackSC_2020/static/css/2.7441e725.chunk.css.map",
-    "static/css/main.fa0af7ce.chunk.css.map": "/HackSC_2020/static/css/main.fa0af7ce.chunk.css.map",
-    "static/js/2.574cbb75.chunk.js.LICENSE.txt": "/HackSC_2020/static/js/2.574cbb75.chunk.js.LICENSE.txt",
-    "static/media/mdb.css": "/HackSC_2020/static/media/arrow_right.8ef6a08c.svg",
-    "static/media/all.min.css": "/HackSC_2020/static/media/fa-solid-900.f6121be5.woff2"
+    "main.css": "/LiveAndLearn/static/css/main.fe1c4501.chunk.css",
+    "main.js": "/LiveAndLearn/static/js/main.7839a34f.chunk.js",
+    "main.js.map": "/LiveAndLearn/static/js/main.7839a34f.chunk.js.map",
+    "runtime-main.js": "/LiveAndLearn/static/js/runtime-main.0d084b3d.js",
+    "runtime-main.js.map": "/LiveAndLearn/static/js/runtime-main.0d084b3d.js.map",
+    "static/css/2.86543302.chunk.css": "/LiveAndLearn/static/css/2.86543302.chunk.css",
+    "static/js/2.a8fdbb3d.chunk.js": "/LiveAndLearn/static/js/2.a8fdbb3d.chunk.js",
+    "static/js/2.a8fdbb3d.chunk.js.map": "/LiveAndLearn/static/js/2.a8fdbb3d.chunk.js.map",
+    "index.html": "/LiveAndLearn/index.html",
+    "precache-manifest.69f072e225971776b2d7523cabc64e87.js": "/LiveAndLearn/precache-manifest.69f072e225971776b2d7523cabc64e87.js",
+    "service-worker.js": "/LiveAndLearn/service-worker.js",
+    "static/css/2.86543302.chunk.css.map": "/LiveAndLearn/static/css/2.86543302.chunk.css.map",
+    "static/css/main.fe1c4501.chunk.css.map": "/LiveAndLearn/static/css/main.fe1c4501.chunk.css.map",
+    "static/js/2.a8fdbb3d.chunk.js.LICENSE.txt": "/LiveAndLearn/static/js/2.a8fdbb3d.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/LiveAndLearn/static/media/368303.c7a6825a.jpg",
+    "static/media/mdb.css": "/LiveAndLearn/static/media/arrow_right.8ef6a08c.svg",
+    "static/media/all.min.css": "/LiveAndLearn/static/media/fa-solid-900.f6121be5.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.303a5f82.js",
-    "static/css/2.7441e725.chunk.css",
-    "static/js/2.574cbb75.chunk.js",
-    "static/css/main.fa0af7ce.chunk.css",
-    "static/js/main.65e78d9c.chunk.js"
+    "static/js/runtime-main.0d084b3d.js",
+    "static/css/2.86543302.chunk.css",
+    "static/js/2.a8fdbb3d.chunk.js",
+    "static/css/main.fe1c4501.chunk.css",
+    "static/js/main.7839a34f.chunk.js"
   ]
 }
