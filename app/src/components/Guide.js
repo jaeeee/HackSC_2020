@@ -30,7 +30,7 @@ export class Guide extends Component {
                   <p>
                     <i>
                       First and foremost, welcome to Live&Learn, we are so happy
-                      to have you on board!
+                      to have you on board. Here at Live&Learn, we provide you a platform for you to broadcast seamlessly and share deeper connections with others.  
                     </i>
                   </p>
                   <h4>

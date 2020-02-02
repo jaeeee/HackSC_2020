@@ -51,7 +51,7 @@ export class Dashboard extends Component {
            console.log(e.target.value);
            //  }
            console.log(this.state.name);
-                     this.forceUpdate();
+                    //  this.forceUpdate();
          }
 
          submitQuestion(e) {
@@ -90,7 +90,7 @@ export class Dashboard extends Component {
           this.state.questions = qs;
         });
       });
-      this.forceUpdate();
+      // this.forceUpdate();
          }
 
          logout() {
