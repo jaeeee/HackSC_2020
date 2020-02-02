@@ -88,12 +88,16 @@ export class CurrentStreams extends Component {
                 // }
               // });
               // this.updateInfo();
+              // this.updateInfo();
            var blah = "";
            blah += "https://stream.mux.com/";
            blah += this.state.playbackID;
            blah += ".m3u8";
            console.log(blah);
            this.setState({streamURL: blah});
+           this.render();
+          //  this.componentWillUnmount();
+          //  this.componentDidMount();
           //  var bruh = JSON.stringify(this.state.playbackID);
           //  console.log(this.state.playbackID);
           //  console.log(JSON.stringify(this.state.playbackID));
