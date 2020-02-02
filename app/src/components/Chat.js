@@ -31,8 +31,8 @@ const channel = chatClient.channel("livestream", "spacex", {
 const Chatter = () => (
 <div
                  style={{
-                  //  display: "flex",
-                  //  justifyContent: "left",
+                   display: "flex",
+                   justifyContent: "left",
                    alignItems: "center",
                   //  height: "vh",
                   //  width: "80vh"

@@ -161,7 +161,7 @@ export class Dashboard extends Component {
                  <MDBContainer>
                    <MDBCard>
                      <center>
-                       <h1>EducateMe</h1>
+                       <h1>Live&Learn</h1>
                        <h3>
                          Free interactive live streams for educators and
                          students

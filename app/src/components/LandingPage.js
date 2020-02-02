@@ -73,11 +73,11 @@ export class LandingPage extends Component {
                  <MDBContainer>
                    <MDBCard>
                      <center>
-                       {/* <h1>EducateMe</h1> */}
-                       {/* <h3> */}
-                         {/* Free interactive live streams for educators and */}
-                         {/* students */}
-                       {/* </h3> */}
+                       <h1>Live&Learn</h1>
+                       <h3>
+                         Free interactive live streams for educators and
+                         students
+                       </h3>
                     {/* <Dashboard /> */}
                        {/* <ol> */}
                        {/* <ul class="list-group"> */}
@@ -88,17 +88,7 @@ export class LandingPage extends Component {
                        /> */}
                        {/* <Chatter /> */}
                        <p>
-                         <div
-                 style={{
-                  //  display: "flex",
-                  //  justifyContent: "center",
-                  //  alignItems: "center",
-                  //  height: "25vh",
-                  //  width: "80vh"
-                 }}
-               >
-                         <Chatter />
-                         </div>
+                         {/* <Chatter /> */}
                          {/* Welcome to EducateMe - the first free and live education platform for instructors and students. */}
                        </p>
                      </center>
