@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer-copyright text-center py-3">
           <center>
             <MDBContainer fluid>
-              &copy; {new Date().getFullYear()} Copyright:{" "}
+              &copy; {new Date().getFullYear()}:
               <a href="https://github.com/jaeeee/HackSC_2020/"> Live&Learn </a>{" "}
               <MDBIcon icon="heart" />
               {/* Made at USC. */}
