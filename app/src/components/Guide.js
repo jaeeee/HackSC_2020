@@ -25,24 +25,16 @@ export class Guide extends Component {
             <MDBContainer>
               <MDBCard>
                 <center>
-                  <MDBCardTitle>Card title</MDBCardTitle>
-                  <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card&apos;s content.
-                  </MDBCardText>
-                  <h3>Guide here!</h3>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.
-                  </p>
+                  <h3>Getting Started</h3>
+
+                  <h4>
+                    <b>Streamer</b>
+                  </h4>
+                  <p>Please navigate to the Profile page via the Navigation Bar in order to set your stream key and stream ID. This will allow you to broadcast to audiences. In order to stream, you must use valid broadcasting service like OBS and configure your stream settings accordingly. Never share your stream key with anyone.</p>
+                  <h4>
+                    <b>User</b>
+                  </h4>
+                  <p>You can view anybody's broadcast on this site. Navigate to the Streams section of our website and simply just enter the person's email you would like to view.</p>
                 </center>
               </MDBCard>
             </MDBContainer>

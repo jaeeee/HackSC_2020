@@ -39,7 +39,7 @@ export class Dashboard extends Component {
            this.componentDidUpdate = this.componentDidUpdate.bind(this);
 
            this.state = {
-             apiResponse: "default testAPI state",
+            //  apiResponse: "default testAPI state",
              question: "",
              questions: [],
              upvotes: []
@@ -56,6 +56,7 @@ export class Dashboard extends Component {
            console.log(e.target.value);
            //  }
            console.log(this.state.name);
+                     this.forceUpdate();
          }
 
          submitQuestion(e) {
@@ -133,7 +134,8 @@ export class Dashboard extends Component {
              .doc(data.uid)
              .set({
                question: data.question,
-               upvotes: data.upvotes
+               upvotes: data.upvotes,
+               uid: data.uid
                //  usersWhoUpvoted: data.usersWhoUpvoted.push(fire.auth().currentUser.email);
              });
            const qs = [];
@@ -146,6 +148,7 @@ export class Dashboard extends Component {
                  this.state.questions = qs;
                });
              });
+             this.forceUpdate();
          };
          //  };
          render() {
