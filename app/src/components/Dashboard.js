@@ -36,7 +36,7 @@ export class Dashboard extends Component {
            this.handleChange = this.handleChange.bind(this);
            this.submitQuestion = this.submitQuestion.bind(this);
            this.componentDidMount = this.componentDidMount.bind(this);
-           this.componentDidUpdate = this.componentDidUpdate.bind(this);
+          //  this.componentDidUpdate = this.componentDidUpdate.bind(this);
 
            this.state = {
              question: "",
@@ -65,6 +65,16 @@ export class Dashboard extends Component {
                question: this.state.question,
                upvotes: 0
              });
+              const qs = [];
+              db.collection("questions")
+                .get()
+                .then(snapshot => {
+                  snapshot.forEach(doc => {
+                    qs.push(doc.data());
+                    this.setState({ questions: qs });
+                    //  this.state.questions = qs;
+                  });
+                });
          }
 
          componentDidMount() {
@@ -74,24 +84,26 @@ export class Dashboard extends Component {
              .then(snapshot => {
                snapshot.forEach(doc => {
                  qs.push(doc.data());
-                 this.state.questions = qs;
+                       this.setState({ questions: qs });
+                //  this.state.questions = qs;
                });
              });
          }
 
-         componentDidUpdate() {
-    const qs = [];
-    db.collection("questions")
-      .get()
-      .then(snapshot => {
-        snapshot.forEach(doc => {
-          //  qs[doc.key] = doc.data();
-          qs.push(doc.data());
-          this.state.questions = qs;
-        });
-      });
+    //      componentDidUpdate() {
+    // const qs = [];
+    // db.collection("questions")
+    //   .get()
+    //   .then(snapshot => {
+    //     snapshot.forEach(doc => {
+    //       //  qs[doc.key] = doc.data();
+    //       qs.push(doc.data());
+    //             this.setState({ questions: qs });
+    //       // this.state.questions = qs;
+    //     });
+    //   });
       // this.forceUpdate();
-         }
+        //  }
 
          logout() {
            fire.auth().signOut();
@@ -115,7 +127,8 @@ export class Dashboard extends Component {
                snapshot.forEach(doc => {
                  //  qs[doc.key] = doc.data();
                  qs.push(doc.data());
-                 this.state.questions = qs;
+                 this.setState({questions : qs});
+                //  this.state.questions = qs;
                });
              });
              this.forceUpdate();
