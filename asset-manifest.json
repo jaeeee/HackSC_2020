@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/HackSC_2020/static/css/main.fa0af7ce.chunk.css",
-    "main.js": "/HackSC_2020/static/js/main.a53db0e0.chunk.js",
-    "main.js.map": "/HackSC_2020/static/js/main.a53db0e0.chunk.js.map",
+    "main.js": "/HackSC_2020/static/js/main.adbb1b37.chunk.js",
+    "main.js.map": "/HackSC_2020/static/js/main.adbb1b37.chunk.js.map",
     "runtime-main.js": "/HackSC_2020/static/js/runtime-main.303a5f82.js",
     "runtime-main.js.map": "/HackSC_2020/static/js/runtime-main.303a5f82.js.map",
-    "static/css/2.1d7c3f88.chunk.css": "/HackSC_2020/static/css/2.1d7c3f88.chunk.css",
-    "static/js/2.808d41fb.chunk.js": "/HackSC_2020/static/js/2.808d41fb.chunk.js",
-    "static/js/2.808d41fb.chunk.js.map": "/HackSC_2020/static/js/2.808d41fb.chunk.js.map",
+    "static/css/2.7441e725.chunk.css": "/HackSC_2020/static/css/2.7441e725.chunk.css",
+    "static/js/2.574cbb75.chunk.js": "/HackSC_2020/static/js/2.574cbb75.chunk.js",
+    "static/js/2.574cbb75.chunk.js.map": "/HackSC_2020/static/js/2.574cbb75.chunk.js.map",
     "index.html": "/HackSC_2020/index.html",
-    "precache-manifest.55e7e99058ca44c3e01e281aea389a63.js": "/HackSC_2020/precache-manifest.55e7e99058ca44c3e01e281aea389a63.js",
+    "precache-manifest.0eda903c6aa4cb9d2cf01d3d5586ff1e.js": "/HackSC_2020/precache-manifest.0eda903c6aa4cb9d2cf01d3d5586ff1e.js",
     "service-worker.js": "/HackSC_2020/service-worker.js",
-    "static/css/2.1d7c3f88.chunk.css.map": "/HackSC_2020/static/css/2.1d7c3f88.chunk.css.map",
+    "static/css/2.7441e725.chunk.css.map": "/HackSC_2020/static/css/2.7441e725.chunk.css.map",
     "static/css/main.fa0af7ce.chunk.css.map": "/HackSC_2020/static/css/main.fa0af7ce.chunk.css.map",
-    "static/js/2.808d41fb.chunk.js.LICENSE.txt": "/HackSC_2020/static/js/2.808d41fb.chunk.js.LICENSE.txt",
+    "static/js/2.574cbb75.chunk.js.LICENSE.txt": "/HackSC_2020/static/js/2.574cbb75.chunk.js.LICENSE.txt",
     "static/media/mdb.css": "/HackSC_2020/static/media/arrow_right.8ef6a08c.svg",
     "static/media/all.min.css": "/HackSC_2020/static/media/fa-solid-900.f6121be5.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.303a5f82.js",
-    "static/css/2.1d7c3f88.chunk.css",
-    "static/js/2.808d41fb.chunk.js",
+    "static/css/2.7441e725.chunk.css",
+    "static/js/2.574cbb75.chunk.js",
     "static/css/main.fa0af7ce.chunk.css",
-    "static/js/main.a53db0e0.chunk.js"
+    "static/js/main.adbb1b37.chunk.js"
   ]
 }
