@@ -70,7 +70,10 @@ export class CurrentStreams extends Component {
                           streamTitle: doc.data().streamTitle,
                           streamCategory: doc.data().streamCategory
                         });
+                        let yes = "https://stream.mux.com/" + doc.data().playbackID + ".m3u8";
+                        currentComp.setState({streamURL: yes});
                         // }
+
                       } catch (error) {
                         console.log("We getting an error: ", error); // ADD back later
                         found = 0;
@@ -89,13 +92,15 @@ export class CurrentStreams extends Component {
               // });
               // this.updateInfo();
               // this.updateInfo();
-           var blah = "";
+
+           /*var blah = "";
            blah += "https://stream.mux.com/";
            blah += this.state.playbackID;
            blah += ".m3u8";
            console.log(blah);
            this.setState({streamURL: blah});
-           this.render();
+           this.render();*/
+
           //  this.componentWillUnmount();
           //  this.componentDidMount();
           //  var bruh = JSON.stringify(this.state.playbackID);
@@ -111,7 +116,7 @@ export class CurrentStreams extends Component {
          }
 
          componentDidMount() {
-           this._isMounted = true;  
+           this._isMounted = true;
          }
         //  componentDidMount() {
         //    this._isMounted = true;
