@@ -13,12 +13,24 @@ import { db } from "../config/firebase";
 import "stream-chat-react/dist/css/index.css";
 
 const chatClient = new StreamChat("4zbz7yw374h6");
-const userToken =
-  "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGl2aW5lLWFydC05In0.0Ce-vmn7fcec-PCD2OWy3sIVRLrmKRhBXp69vSGlgtw";
+/*const userToken =
+  "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGl2aW5lLWFydC05In0.0
+  Ce-vmn7fcec-PCD2OWy3sIVRLrmKRhBXp69vSGlgtw";*/
+
   const channel = chatClient.channel("livestream", "spacex", {
     image: "https://goo.gl/Zefkbx",
     name: "SpaceX launch discussion"
   });
+
+  chatClient.setUser(
+    {
+      id: this.state.localChatID,
+      name: this.state.localChatname,
+      image: this.state.localChatImage
+    },
+    this.state.localChatToken
+  );
+
 export class Chatter extends Component {
   constructor() {
     super();
@@ -29,14 +41,7 @@ export class Chatter extends Component {
       localChatImage: "",
     }
 
-    chatClient.setUser(
-      {
-        id: this.state.localChatID,
-        name: this.state.localChatname,
-        image: this.state.localChatImage
-      },
-      this.state.localChatToken
-    );
+
   };
   componentWillUnmount() {
     this._isMounted = false;
@@ -83,6 +88,7 @@ export class Chatter extends Component {
   };
 
   render() {
+
     return (<div>
       <Chat client={chatClient} theme={"livestream dark"}>
         <Channel channel={channel} Message={MessageLivestream}>
