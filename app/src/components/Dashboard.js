@@ -36,6 +36,8 @@ export class Dashboard extends Component {
            this.handleChange = this.handleChange.bind(this);
            this.submitQuestion = this.submitQuestion.bind(this);
            this.componentDidMount = this.componentDidMount.bind(this);
+           this.componentDidUpdate = this.componentDidUpdate.bind(this);
+
            this.state = {
              apiResponse: "default testAPI state",
              question: "",
@@ -93,7 +95,7 @@ export class Dashboard extends Component {
          //  }
 
          componentDidMount() {
-            this.state.question = "";
+            // this.state.question = "";
            //  this.setState()
            const qs = [];
            db.collection("questions")
@@ -105,6 +107,19 @@ export class Dashboard extends Component {
                  this.state.questions = qs;
                });
              });
+         }
+
+         componentDidUpdate() {
+    const qs = [];
+    db.collection("questions")
+      .get()
+      .then(snapshot => {
+        snapshot.forEach(doc => {
+          //  qs[doc.key] = doc.data();
+          qs.push(doc.data());
+          this.state.questions = qs;
+        });
+      });
          }
 
          logout() {
