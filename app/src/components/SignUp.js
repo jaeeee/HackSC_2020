@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { StreamChat } from 'stream-chat';
 import {
   MDBContainer,
   MDBRow,
@@ -20,17 +21,41 @@ export class SignUp extends Component {
     this.state = {
       name: "",
       email: "",
-      password: ""
+      password: "",
+      chatID: "",
+      chatImage: "",
+      chatToken: ""
     };
   }
   handleChange(e) {
     // console.log(e.target.value);
     this.setState({ [e.target.name]: e.target.value });
+    if(e.target.name === "name"){
+      let arr = e.target.value.split(" ");
+      let temp = arr[0].charAt(0) + arr[1];
+      this.setState({ chatID: temp});
+      this.setState({ chatImage: 'https://getstream.io/random_svg/?id=' + temp + '&name=' + e.target.value })
+      this.createNewToken();
+    }
+
   }
+
+  createNewToken = () => {
+    fetch("http://localhost:9000/chatToken", {
+      method: "POST"
+    })
+      .then(res => res.json())
+      .then((data) =>{
+        //alert(data.chatToken);
+        this.setState({
+          chatToken: data.chatToken,
+        })
+      });
+  };
 
   signup(e) {
     e.preventDefault();
-    // console.log("passed signup");
+    // console.log("passed signup")
     fire
       .auth()
       .createUserWithEmailAndPassword(this.state.email, this.state.password)
@@ -52,8 +77,11 @@ export class SignUp extends Component {
         playbackID: null,
         streamTitle: null,
         streamDescription: null,
-        streamCategory: null
-        // wallet: 1000
+        streamCategory: null,
+        chatID: this.state.chatID,
+        chatName: this.state.name,
+        chatImage: this.state.chatImage,
+        chatToken: this.state.chatToken
       });
   }
   render() {
