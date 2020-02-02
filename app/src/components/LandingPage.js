@@ -32,6 +32,7 @@ import {
 import ReactPlayer from "react-player";
 import NavBar from './NavBar';
 import Chatter from './Chat';
+import Chatbox from './Chatbox';
 import Dashboard from "./Dashboard";
 export class LandingPage extends Component {
          constructor(props) {
@@ -78,21 +79,10 @@ export class LandingPage extends Component {
                          Free interactive live streams for educators and
                          students
                        </h3>
-                       {/* <Dashboard /> */}
-                       {/* <ol> */}
-                       {/* <ul class="list-group"> */}
-
-                       {/* <ReactPlayer
-                         url="https://stream.mux.com/VOyYAIXDgyPVGylxN00GJ01edJAhBUlAkS.m3u8"
-                         playing="true"
-                       /> */}
-                       {/* <Chatter /> */}
-                       <p>
-                         {/* <Chatter /> */}
-                         {/* Welcome to EducateMe - the first free and live education platform for instructors and students. */}
-                       </p>
+                       {/* <div style={{height:"10vh"}}> */}
+                         <Chatbox />
+                       {/* </div> */}
                      </center>
-                     {/* <MDBBtn onClick={this.logout}>Logout</MDBBtn> */}
                    </MDBCard>
                  </MDBContainer>
 

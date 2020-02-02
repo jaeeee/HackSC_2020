@@ -39,18 +39,13 @@ export class Dashboard extends Component {
            this.componentDidUpdate = this.componentDidUpdate.bind(this);
 
            this.state = {
-            //  apiResponse: "default testAPI state",
              question: "",
              questions: [],
              upvotes: []
            };
-        //    this.setState(this.state.question : "");
          }
 
          handleChange(e) {
-           //  console.log(e.target.value);
-           // console.log(e.target.name);
-           //  if (this._isMounted) {
            console.log(e.target.name);
            this.setState({ [e.target.name]: e.target.value });
            console.log(e.target.value);
@@ -66,44 +61,18 @@ export class Dashboard extends Component {
              .firestore()
              .doc(`/questions/${blah}`)
              .set({
-               // name: this.state.name,
-               // password: this.state.password,
-               // streamKey: null,
-               // playbackID: null,
-               // streamTitle: null,
-               // streamDescription: null,
-               // streamCategory: null
                uid: blah,
                question: this.state.question,
                upvotes: 0
-               // wallet: 1000
              });
          }
-         //  callAPI() {
-         //    console.log("sup");
-         //    fetch("http://localhost:9000/testAPI")
-         //      .then(() => alert("passed thru")) // testing
-         //      .then(res => res.text()) //testing
-         //      .then(res => this.setState({ apiResponse: res }))
-         //      // console.log(res)
-         //      .catch(error => alert(error));
-         //  }
-
-         //  callAPI() {
-         //    fetch("http://localhost:9000/streamLive")
-         //      .then(res => res.text())
-         //      .then(res => this.setState({ apiResponse: res }));
-         //  }
 
          componentDidMount() {
-            // this.state.question = "";
-           //  this.setState()
            const qs = [];
            db.collection("questions")
              .get()
              .then(snapshot => {
                snapshot.forEach(doc => {
-                 //  qs[doc.key] = doc.data();
                  qs.push(doc.data());
                  this.state.questions = qs;
                });
@@ -121,6 +90,7 @@ export class Dashboard extends Component {
           this.state.questions = qs;
         });
       });
+      this.forceUpdate();
          }
 
          logout() {
