@@ -94,7 +94,7 @@ export class CurrentStreams extends Component {
               currentComp.setState({
                 streamURL: yes
               });
-              console.log("allow it");
+              // console.log("allow it");
               // Do something with the response
               } else {
                 alert("Stream is currently offline!");
@@ -109,7 +109,7 @@ export class CurrentStreams extends Component {
               }
             })
             .catch(error => {
-              alert("Stream is currently offline!");
+              // alert("Stream is currently offline!");
               // currentComp.setState({});
             });
           // fetch(yes, {

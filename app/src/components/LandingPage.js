@@ -73,7 +73,7 @@ export class LandingPage extends Component {
                >
                  <MDBContainer>
                    <MDBCard style={{ padding: "20px" }}>
-                     <center>
+                     {/* <center> */}
                        <h1>Live&Learn</h1>
                        <h3>
                          Free interactive live streams for educators and
@@ -82,7 +82,7 @@ export class LandingPage extends Component {
                        {/* <div style={{height:"10vh"}}> */}
                          <Chatbox />
                        {/* </div> */}
-                     </center>
+                     {/* </center> */}
                    </MDBCard>
                  </MDBContainer>
 
