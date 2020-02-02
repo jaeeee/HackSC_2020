@@ -154,67 +154,64 @@ export class Dashboard extends Component {
          render() {
            return (
              <div
-                 style={{
-                   display: "flex",
-                   justifyContent: "center",
-                   alignItems: "center",
-                   height: "100vh"
-                 }}
-               >
-                 <MDBContainer>
-                   <MDBCard>
-                     <center>
-                       <h1>Live&Learn</h1>
-                       <h3>
-                         Free interactive live streams for educators and
-                         students
-                       </h3>
-                 
-               {" "}
-               {this.state.questions.map((d, idx) => (
-                 <MDBListGroupItem
-                   className="d-flex justify-content-between align-items-center"
-                   key={idx}
-                 >
-                   {d.question}{" "}
-                   <MDBIcon
-                     value={d}
-                     onClick={this.handleClick.bind(this, d)}
-                     icon="thumbs-up"
-                   >
-                     {" "}
-                     {d.upvotes}{" "}
-                   </MDBIcon>
-                   {/* <MDBBadge color="green" pill>
+               style={{
+                 display: "flex",
+                 justifyContent: "center",
+                 alignItems: "center",
+                 height: "100vh"
+               }}
+             >
+               <MDBContainer>
+                 <MDBCard style={{ padding: "20px" }}>
+                   <center>
+                     <h1>Live&Learn</h1>
+                     <h3>
+                       Free interactive live streams for educators and students
+                     </h3>{" "}
+                     {this.state.questions.map((d, idx) => (
+                       <MDBListGroupItem
+                         className="d-flex justify-content-between align-items-center"
+                         key={idx}
+                       >
+                         {d.question}{" "}
+                         <MDBIcon
+                           value={d}
+                           onClick={this.handleClick.bind(this, d)}
+                           icon="thumbs-up"
+                         >
+                           {" "}
+                           {d.upvotes}{" "}
+                         </MDBIcon>
+                         {/* <MDBBadge color="green" pill>
                              3
                            </MDBBadge>{" "} */}
-                 </MDBListGroupItem>
-               ))}
-               {/* </ul> */}
-               {/* </ol> */}
-               <MDBInput
-                 value={this.state.question}
-                 onChange={this.handleChange}
-                 label="Ask a question"
-                 //  icon="envelope"
-                //  group
-                 name="question"
-                 type="text"
-                 //  validate
-                 error="wrong"
-                 success="right"
-                //   disabled
-               />
-               <MDBBtn
-                 color="green"
-                 type="button"
-                 onClick={this.submitQuestion}
-               >
-                 Submit
-               </MDBBtn>
-               </center>
-               </MDBCard>
-             </MDBContainer>
+                       </MDBListGroupItem>
+                     ))}
+                     {/* </ul> */}
+                     {/* </ol> */}
+                     <MDBInput
+                       value={this.state.question}
+                       onChange={this.handleChange}
+                       label="Ask a question"
+                       //  icon="envelope"
+                       //  group
+                       name="question"
+                       type="text"
+                       //  validate
+                       error="wrong"
+                       success="right"
+                       //   disabled
+                     />
+                     <MDBBtn
+                       color="green"
+                       type="button"
+                       onClick={this.submitQuestion}
+                     >
+                       Submit
+                     </MDBBtn>
+                   </center>
+                 </MDBCard>
+               </MDBContainer>
              </div>
            );
          }

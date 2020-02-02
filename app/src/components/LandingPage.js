@@ -71,17 +71,17 @@ export class LandingPage extends Component {
                  }}
                >
                  <MDBContainer>
-                   <MDBCard>
+                   <MDBCard style={{ padding: "20px" }}>
                      <center>
                        <h1>Live&Learn</h1>
                        <h3>
                          Free interactive live streams for educators and
                          students
                        </h3>
-                    {/* <Dashboard /> */}
+                       {/* <Dashboard /> */}
                        {/* <ol> */}
                        {/* <ul class="list-group"> */}
-                      
+
                        {/* <ReactPlayer
                          url="https://stream.mux.com/VOyYAIXDgyPVGylxN00GJ01edJAhBUlAkS.m3u8"
                          playing="true"

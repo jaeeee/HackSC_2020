@@ -143,11 +143,12 @@ export class Profile extends Component {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "100vh"
+          height: "100vh",
+          // margin: ""
         }}
       >
         <MDBContainer>
-          <MDBCard>
+          <MDBCard style={{padding:"20px"}}>
             <center>
               <h3>Stream Configurations</h3>
               {/* <p>

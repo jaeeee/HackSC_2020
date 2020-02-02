@@ -244,7 +244,7 @@ export class CurrentStreams extends Component {
         }}
       >
         <MDBContainer>
-          <MDBCard>
+          <MDBCard style={{ padding: "20px" }}>
             <center>
               <MDBBtn color="green" type="button" onClick={this.updateInfo}>
                 {/* <MDBIcon icon="video" /> */}
