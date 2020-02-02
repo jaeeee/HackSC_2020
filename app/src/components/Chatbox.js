@@ -14,18 +14,6 @@ import Typography from "@material-ui/core/Typography";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 
-// const config = {
-//   apiKey: "AIzaSyC9Hcq-eFBRGcC79SXtYp1NVDjsss3tEC8",
-//   authDomain: "chat-16ee2.firebaseapp.com",
-//   databaseURL: "https://chat-16ee2.firebaseio.com",
-//   projectId: "chat-16ee2",
-//   storageBucket: "chat-16ee2.appspot.com",
-//   messagingSenderId: "703172176372"
-// // };
-// if (!firebase.apps.length) {
-//   firebase.initializeApp(config);
-// }
-
 class Chatbox extends Component {
   constructor() {
     super();
@@ -75,29 +63,29 @@ class Chatbox extends Component {
       .on("child_added", callback);
   }
 
-  renderPopup() {
-    return (
-      <Dialog open={!this.state.isAuthenticated}>
-        <DialogTitle id="simple-dialog-title">Sign in</DialogTitle>
-        <div>
-          <List>
-            <ListItem button onClick={() => this.signIn()}>
-              <ListItemAvatar>
-                <Avatar style={{ backgroundColor: "#eee" }}>
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                    height="30"
-                    alt="G"
-                  />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText primary="Sign in with Google" />
-            </ListItem>
-          </List>
-        </div>
-      </Dialog>
-    );
-  }
+//   renderPopup() {
+//     return (
+//       <Dialog open={!this.state.isAuthenticated}>
+//         <DialogTitle id="simple-dialog-title">Sign in</DialogTitle>
+//         <div>
+//           <List>
+//             <ListItem button onClick={() => this.signIn()}>
+//               <ListItemAvatar>
+//                 <Avatar style={{ backgroundColor: "#eee" }}>
+//                   <img
+//                     src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+//                     height="30"
+//                     alt="G"
+//                   />
+//                 </Avatar>
+//               </ListItemAvatar>
+//               <ListItemText primary="Sign in with Google" />
+//             </ListItem>
+//           </List>
+//         </div>
+//       </Dialog>
+//     );
+//   }
 
   onSend(messages) {
     for (const message of messages) {
@@ -182,7 +170,7 @@ class Chatbox extends Component {
   render() {
     return (
       <div style={styles.container}>
-        {this.renderPopup()}
+        {/* {this.renderPopup()} */}
         <div style={styles.channelList}>
           {this.renderChannelsHeader()}
           {this.renderChannels()}
