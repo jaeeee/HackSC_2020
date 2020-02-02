@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "http://danielkwong.me/HackSC_2020/",
+  "homepage": "http://danielkwong.me/LiveAndLearn/",
   "private": true,
   "dependencies": {
     "@mux/mux-node": "^2.6.0",
