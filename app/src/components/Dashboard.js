@@ -134,9 +134,9 @@ export class Dashboard extends Component {
                <MDBContainer>
                  <MDBCard style={{ padding: "20px" }}>
                    <center>
-                     <h1>Live&Learn</h1>
+                     <h1>Have something to share?</h1>
                      <h3>
-                       Free interactive live streams for educators and students
+                       Ask us a thought provoking question.
                      </h3>{" "}
                      {this.state.questions.map((d, idx) => (
                        <MDBListGroupItem
