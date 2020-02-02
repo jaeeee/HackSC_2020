@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/LiveAndLearn/static/css/main.fe1c4501.chunk.css",
+    "main.css": "/LiveAndLearn/static/css/main.35b917b4.chunk.css",
     "main.js": "/LiveAndLearn/static/js/main.7839a34f.chunk.js",
     "main.js.map": "/LiveAndLearn/static/js/main.7839a34f.chunk.js.map",
     "runtime-main.js": "/LiveAndLearn/static/js/runtime-main.0d084b3d.js",
@@ -9,12 +9,11 @@
     "static/js/2.a8fdbb3d.chunk.js": "/LiveAndLearn/static/js/2.a8fdbb3d.chunk.js",
     "static/js/2.a8fdbb3d.chunk.js.map": "/LiveAndLearn/static/js/2.a8fdbb3d.chunk.js.map",
     "index.html": "/LiveAndLearn/index.html",
-    "precache-manifest.69f072e225971776b2d7523cabc64e87.js": "/LiveAndLearn/precache-manifest.69f072e225971776b2d7523cabc64e87.js",
+    "precache-manifest.940b67079d1f4809e539251834aa1bb0.js": "/LiveAndLearn/precache-manifest.940b67079d1f4809e539251834aa1bb0.js",
     "service-worker.js": "/LiveAndLearn/service-worker.js",
     "static/css/2.86543302.chunk.css.map": "/LiveAndLearn/static/css/2.86543302.chunk.css.map",
-    "static/css/main.fe1c4501.chunk.css.map": "/LiveAndLearn/static/css/main.fe1c4501.chunk.css.map",
+    "static/css/main.35b917b4.chunk.css.map": "/LiveAndLearn/static/css/main.35b917b4.chunk.css.map",
     "static/js/2.a8fdbb3d.chunk.js.LICENSE.txt": "/LiveAndLearn/static/js/2.a8fdbb3d.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/LiveAndLearn/static/media/368303.c7a6825a.jpg",
     "static/media/mdb.css": "/LiveAndLearn/static/media/arrow_right.8ef6a08c.svg",
     "static/media/all.min.css": "/LiveAndLearn/static/media/fa-solid-900.f6121be5.woff2"
   },
@@ -22,7 +21,7 @@
     "static/js/runtime-main.0d084b3d.js",
     "static/css/2.86543302.chunk.css",
     "static/js/2.a8fdbb3d.chunk.js",
-    "static/css/main.fe1c4501.chunk.css",
+    "static/css/main.35b917b4.chunk.css",
     "static/js/main.7839a34f.chunk.js"
   ]
 }

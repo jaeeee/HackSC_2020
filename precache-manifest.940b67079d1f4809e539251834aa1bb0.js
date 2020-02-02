@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "21064cf9bd62984c113558028acf0ee2",
+    "revision": "4717b7e8cb14e18daacbd44491db96e1",
     "url": "/LiveAndLearn/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/LiveAndLearn/static/css/2.86543302.chunk.css"
   },
   {
-    "revision": "e430eb58ed6d4678de0b",
-    "url": "/LiveAndLearn/static/css/main.fe1c4501.chunk.css"
+    "revision": "f2acc7471c706e524aeb",
+    "url": "/LiveAndLearn/static/css/main.35b917b4.chunk.css"
   },
   {
     "revision": "5784686c5edeecf9edab",
@@ -20,16 +20,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/LiveAndLearn/static/js/2.a8fdbb3d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e430eb58ed6d4678de0b",
+    "revision": "f2acc7471c706e524aeb",
     "url": "/LiveAndLearn/static/js/main.7839a34f.chunk.js"
   },
   {
     "revision": "3900a5f33f2f088bc9f6",
     "url": "/LiveAndLearn/static/js/runtime-main.0d084b3d.js"
-  },
-  {
-    "revision": "c7a6825a041e939697aa397088570be7",
-    "url": "/LiveAndLearn/static/media/368303.c7a6825a.jpg"
   },
   {
     "revision": "39b2c3031be6b4ea96e2e3e95d307814",
