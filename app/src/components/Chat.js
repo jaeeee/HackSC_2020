@@ -29,6 +29,15 @@ const channel = chatClient.channel("livestream", "spacex", {
 });
 
 const Chatter = () => (
+<div
+                 style={{
+                  //  display: "flex",
+                  //  justifyContent: "left",
+                   alignItems: "center",
+                  //  height: "vh",
+                  //  width: "80vh"
+                 }}
+               >
   <Chat client={chatClient} theme={"livestream dark"}>
     <Channel channel={channel} Message={MessageLivestream}>
       <Window hideOnThread>
@@ -39,6 +48,7 @@ const Chatter = () => (
       <Thread fullWidth />
     </Channel>
   </Chat>
+  </div>
 );
 
 export default Chatter;
