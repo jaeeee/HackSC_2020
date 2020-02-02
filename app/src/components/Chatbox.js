@@ -125,7 +125,7 @@ class Chatbox extends Component {
       <List>
         <ListItem button>
           <ListItemAvatar>
-            <Avatar>D</Avatar>
+            <Avatar>L</Avatar>
           </ListItemAvatar>
           <ListItemText primary="Live&Learn" />
         </ListItem>
