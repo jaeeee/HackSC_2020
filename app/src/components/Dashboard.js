@@ -128,7 +128,7 @@ export class Dashboard extends Component {
                snapshot.forEach(doc => {
                  //  qs[doc.key] = doc.data();
                  qs.push(doc.data());
-                                this.state.questions = qs;
+                 this.state.questions = qs;
                });
              });
          };
