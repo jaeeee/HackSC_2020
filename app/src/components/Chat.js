@@ -1,12 +1,11 @@
 import React from "react";
+import { Chat, Channel, ChannelHeader, Window } from "stream-chat-react";
 import {
-  Chat,
-  Channel,
-  ChannelHeader,
-  Thread,
-  Window
+  MessageList,
+  MessageInput,
+  MessageLivestream
 } from "stream-chat-react";
-import { MessageList, MessageInput } from "stream-chat-react";
+import { MessageInputSmall, Thread } from "stream-chat-react";
 import { StreamChat } from "stream-chat";
 
 import "stream-chat-react/dist/css/index.css";
@@ -24,22 +23,20 @@ chatClient.setUser(
   userToken
 );
 
-const channel = chatClient.channel("messaging", "godevs", {
-  // add as many custom fields as you'd like
-  image:
-    "https://cdn.chrisshort.net/testing-certificate-chains-in-go/GOPHER_MIC_DROP.png",
-  name: "Talk about Go"
+const channel = chatClient.channel("livestream", "spacex", {
+  image: "https://goo.gl/Zefkbx",
+  name: "SpaceX launch discussion"
 });
 
 const Chatter = () => (
-  <Chat client={chatClient} theme={"messaging light"}>
-    <Channel channel={channel}>
-      <Window>
-        <ChannelHeader />
+  <Chat client={chatClient} theme={"livestream dark"}>
+    <Channel channel={channel} Message={MessageLivestream}>
+      <Window hideOnThread>
+        <ChannelHeader live />
         <MessageList />
-        <MessageInput />
+        <MessageInput Input={MessageInputSmall} focus />
       </Window>
-      <Thread />
+      <Thread fullWidth />
     </Channel>
   </Chat>
 );
