@@ -97,7 +97,7 @@ export class CurrentStreams extends Component {
               // console.log("allow it");
               // Do something with the response
               } else {
-                alert("Stream is currently offline!");
+                // alert("Stream is currently offline!");
                 currentComp.setState({
                   streamTitle: "OFFLINE",
                   streamDescription: "OFFLINE",
