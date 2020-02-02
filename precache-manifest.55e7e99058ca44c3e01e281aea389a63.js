@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "741bfba5ca1920d34014aec9b2e81aa0",
+    "revision": "26295a8761ed054f39def5bae892d446",
     "url": "/HackSC_2020/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/HackSC_2020/static/css/2.1d7c3f88.chunk.css"
   },
   {
-    "revision": "cd2b708d0de72a0b4a46",
+    "revision": "a5bb0241a18fceb58b30",
     "url": "/HackSC_2020/static/css/main.fa0af7ce.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/HackSC_2020/static/js/2.808d41fb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cd2b708d0de72a0b4a46",
-    "url": "/HackSC_2020/static/js/main.680b2a2d.chunk.js"
+    "revision": "a5bb0241a18fceb58b30",
+    "url": "/HackSC_2020/static/js/main.a53db0e0.chunk.js"
   },
   {
     "revision": "fa8808fa1ab7b5f033b9",
