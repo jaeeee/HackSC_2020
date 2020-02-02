@@ -88,6 +88,7 @@ export class LandingPage extends Component {
                        /> */}
                        {/* <Chatter /> */}
                        <p>
+                         <Chatter />
                          {/* Welcome to EducateMe - the first free and live education platform for instructors and students. */}
                        </p>
                      </center>
