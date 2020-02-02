@@ -22,6 +22,7 @@ import {
   MDBDropdownItem
 } from "mdbreact";
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 export class App extends Component {
   constructor() {
     super();
@@ -35,38 +36,12 @@ export class App extends Component {
   render() {
     return (
       <div>
-        
-          {/* </MDBCollapse> */}
+        {/* </MDBCollapse> */}
         {/* /</div></MDBNavbar> */}
-        {this.state.user ? <NavBar /> : "" }
-        {this.state.user ? 
-        // <MDBNavbar color="indigo" dark expand="md">
-        //   <MDBNavbarBrand>
-        //     <strong className="white-text">EducateMe</strong>
-        //   </MDBNavbarBrand>
-        //   <MDBNavbarToggler onClick={this.toggleCollapse} />
-        //   {/* <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar> */}
-        //   <MDBNavbarNav left>
-        //     <MDBNavItem active>
-        //       <MDBNavLink to="#!">Home</MDBNavLink>
-        //     </MDBNavItem>
-        //     <MDBNavItem>
-        //       {/* <Link to="/streams">About Me</Link> */}
-
-        //       <MDBNavLink to={"/streams"}>Streams</MDBNavLink>
-        //     </MDBNavItem>
-        //     <MDBNavItem>
-        //       <MDBNavLink to="/categories">Categories</MDBNavLink>
-        //     </MDBNavItem>
-        //     <MDBNavItem>
-        //       <MDBNavLink to="/profile">Profile</MDBNavLink>
-        //     </MDBNavItem>
-        //   </MDBNavbarNav>
-        //   </MDBNavbar>>
-        <Main /> : <Login />}
-        {/* <MDBBtn onClick={this.logout}>Logout</MDBBtn> */}
+        {this.state.user ? <NavBar /> : ""}
+        {this.state.user ? <Main /> : <Login />}
+        <center>{this.state.user ? <Footer /> : ""}</center>
       </div>
-
     );
   }
 
