@@ -24,6 +24,7 @@ export class Profile extends Component {
       //  bio: "",
       //  focus: "",
       //  display_budget: "",
+      // Name: "",
       streamKey: "",
       streamDescription: "",
       playbackID: "",
@@ -44,6 +45,7 @@ export class Profile extends Component {
     var docRef = db.collection("users").doc(fire.auth().currentUser.email);
     docRef
       .update({
+        // Name: this.state.Name,
         streamKey: this.state.streamKey,
         playbackID: this.state.playbackID,
         streamTitle: this.state.streamTitle,
@@ -104,6 +106,7 @@ export class Profile extends Component {
                 //  bio: doc.data().bio,
                 //  focus: doc.data().focus,
                 //  name: doc.data().name
+                email: doc.data().email,  
                 streamKey: doc.data().streamKey,
                 streamDescription: doc.data().streamDescription,
                 playbackID: doc.data().playbackID,
@@ -159,6 +162,20 @@ export class Profile extends Component {
                 publishing software like Aldus PageMaker including versions of
                 Lorem Ipsum.
               </p> */}
+              {/* <MDBInput
+                value={this.state.Name}
+                onChange={this.handleChange}
+                label="email"
+                //  icon="envelope"
+                group
+                name="email"
+                type="text"
+                //  validate
+                error="wrong"
+                success="right"
+                // required
+                 disabled
+              /> */}
               <MDBInput
                 value={this.state.streamTitle}
                 onChange={this.handleChange}

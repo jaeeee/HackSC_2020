@@ -54,6 +54,10 @@ export class SignUp extends Component {
   };
 
   signup(e) {
+    if (this.state.name == "" || this.state.email == "" || this.state.password == "") {
+      alert("please fill out all fields");
+      return;
+    }
     e.preventDefault();
     // console.log("passed signup")
     fire

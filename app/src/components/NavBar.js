@@ -57,6 +57,12 @@ export class NavBar extends Component {
                     Guide
                   </MDBNavLink>
                 </MDBNavItem>
+                <MDBNavItem>
+                  <MDBNavLink to="/dashboard">
+                    <MDBIcon icon="question" />
+                    Dashboard
+                  </MDBNavLink>
+                </MDBNavItem>
               </MDBNavbarNav>
               {/* </div> */}
               {/* </div> */}

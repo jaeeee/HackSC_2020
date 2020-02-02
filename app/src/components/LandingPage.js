@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import Router from 'react-router';
 import { BrowserRouter as Router } from "react-router-dom";
 import { Link } from "react-router-dom";
-import fire from "../config/firebase";
+import fire, { db } from "../config/firebase";
 import {
   MDBContainer,
   MDBRow,
@@ -24,42 +24,31 @@ import {
   MDBDropdown,
   MDBDropdownToggle,
   MDBDropdownMenu,
-  MDBDropdownItem
+  MDBDropdownItem,
+  MDBIcon,
+  MDBListGroupItem,
+  MDBBadge
 } from "mdbreact";
 import ReactPlayer from "react-player";
 import NavBar from './NavBar';
 import Chatter from './Chat';
+import Dashboard from "./Dashboard";
 export class LandingPage extends Component {
          constructor(props) {
            super(props);
-           this.state = { apiResponse: "default testAPI state" };
-          //  this.callAPI = this.callAPI.bind(this);
-           this.logout = this.logout.bind(this);
-         }
-
-        //  callAPI() {
-        //    console.log("sup");
-        //    fetch("http://localhost:9000/testAPI")
-        //      .then(() => alert("passed thru")) // testing
-        //      .then(res => res.text()) //testing
-        //      .then(res => this.setState({ apiResponse: res }))
-        //      // console.log(res)
-        //      .catch(error => alert(error));
-        //  }
-
-        //  callAPI() {
-        //    fetch("http://localhost:9000/streamLive")
-        //      .then(res => res.text())
-        //      .then(res => this.setState({ apiResponse: res }));
-        //  }
-
-         componentWillMount() {
-          //  this.callAPI();
-         }
-
-         logout() {
-           fire.auth().signOut();
-         }
+           //  this.componentDidMount();
+           //  this.callAPI = this.callAPI.bind(this);
+          //  this.logout = this.logout.bind(this);
+          //  this.handleChange = this.handleChange.bind(this);
+          //  this.submitQuestion = this.submitQuestion.bind(this);
+          //  this.componentDidMount = this.componentDidMount.bind(this);
+          //  this.state = {
+            //  apiResponse: "default testAPI state",
+            //  question: "",
+            //  questions: [],
+            //  upvotes: []
+          //  };
+          }
 
          render() {
            return (
@@ -89,16 +78,20 @@ export class LandingPage extends Component {
                          Free interactive live streams for educators and
                          students
                        </h3>
+                    {/* <Dashboard /> */}
+                       {/* <ol> */}
+                       {/* <ul class="list-group"> */}
+                      
                        {/* <ReactPlayer
                          url="https://stream.mux.com/VOyYAIXDgyPVGylxN00GJ01edJAhBUlAkS.m3u8"
                          playing="true"
                        /> */}
-                       <Chatter />
+                       {/* <Chatter /> */}
                        <p>
                          {/* Welcome to EducateMe - the first free and live education platform for instructors and students. */}
                        </p>
                      </center>
-                     <MDBBtn onClick={this.logout}>Logout</MDBBtn>
+                     {/* <MDBBtn onClick={this.logout}>Logout</MDBBtn> */}
                    </MDBCard>
                  </MDBContainer>
 
