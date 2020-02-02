@@ -12,6 +12,7 @@ import {
 import { db } from "../config/firebase";
 import fire from "../config/firebase";
 import ReactPlayer from "react-player";
+import Chatbox from "./Chatbox";
 
 export class CurrentStreams extends Component {
   _isMounted = false;
@@ -276,6 +277,16 @@ export class CurrentStreams extends Component {
             </center>
           </MDBCard>
         </MDBContainer>
+        <MDBCard
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            // height: "30vh"
+          }}
+        >
+          <Chatbox />
+        </MDBCard>
       </div>
     );
   }

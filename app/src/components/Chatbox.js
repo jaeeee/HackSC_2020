@@ -127,7 +127,7 @@ class Chatbox extends Component {
           <ListItemAvatar>
             <Avatar>D</Avatar>
           </ListItemAvatar>
-          <ListItemText primary="Default" />
+          <ListItemText primary="Live&Learn" />
         </ListItem>
       </List>
     );
@@ -193,7 +193,7 @@ const styles = {
     flex: 1,
     display: "flex",
     flexDirection: "row",
-    height: "30vh"
+    height: "50vh"
   },
   channelList: {
     display: "flex",
