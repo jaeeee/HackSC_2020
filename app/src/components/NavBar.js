@@ -22,7 +22,7 @@ export class NavBar extends Component {
             {/* // <div> */}
             <MDBNavbar color="dark-green" dark expand="md">
               <MDBNavbarBrand>
-                <strong className="white-text"> EducateMe</strong>{" "}
+                <strong className="white-text"> Live&Learn</strong>{" "}
                 <MDBIcon icon="apple-alt" />
               </MDBNavbarBrand>
               <MDBNavbarToggler onClick={this.toggleCollapse} />

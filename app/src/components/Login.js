@@ -64,7 +64,7 @@ export class Login extends Component {
                <MDBContainer>
                  <MDBCard style={{ justifyContent: "center", padding: "50px" }}>
                    <form>
-                     <p className="h5 mb-4">Sign in to EducateMe</p>
+                     <p className="h5 mb-4">Sign in to Live&Learn</p>
                      <div className="grey-text">
                        <MDBInput
                          value={this.state.email}
