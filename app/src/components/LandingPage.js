@@ -28,6 +28,7 @@ import {
 } from "mdbreact";
 import ReactPlayer from "react-player";
 import NavBar from './NavBar';
+import Chatter from './Chat';
 export class LandingPage extends Component {
          constructor(props) {
            super(props);
@@ -88,10 +89,11 @@ export class LandingPage extends Component {
                          Free interactive live streams for educators and
                          students
                        </h3>
-                       <ReactPlayer
+                       {/* <ReactPlayer
                          url="https://stream.mux.com/VOyYAIXDgyPVGylxN00GJ01edJAhBUlAkS.m3u8"
                          playing="true"
-                       />
+                       /> */}
+                       <Chatter />
                        <p>
                          {/* Welcome to EducateMe - the first free and live education platform for instructors and students. */}
                        </p>
