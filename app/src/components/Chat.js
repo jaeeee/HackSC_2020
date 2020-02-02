@@ -1,108 +1,87 @@
-import { React, Component } from "react";
+
+import React from "react";
 import { Chat, Channel, ChannelHeader, Window } from "stream-chat-react";
 import {
-  MessageList,
-  MessageInput,
-  MessageLivestream
+MessageList,
+MessageInput,
+MessageLivestream
 } from "stream-chat-react";
 import { MessageInputSmall, Thread } from "stream-chat-react";
 import { StreamChat } from "stream-chat";
-import fire from "../config/firebase";
-import { db } from "../config/firebase";
 
 import "stream-chat-react/dist/css/index.css";
 
-const chatClient = new StreamChat("4zbz7yw374h6");
-/*const userToken =
-  "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGl2aW5lLWFydC05In0.0
-  Ce-vmn7fcec-PCD2OWy3sIVRLrmKRhBXp69vSGlgtw";*/
+import { db } from "../config/firebase";
+import fire from "../config/firebase";
 
-  const channel = chatClient.channel("livestream", "spacex", {
-    image: "https://goo.gl/Zefkbx",
-    name: "SpaceX launch discussion"
-  });
+const chatClient = new StreamChat("4zbz7yw374h6");
+const userToken =
+"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGl2aW5lLWFydC05In0.0Ce-vmn7fcec-PCD2OWy3sIVRLrmKRhBXp69vSGlgtw";
+
+
+let localChatToken = "";
+let localChatname = "";
+let localChatID = "";
+let localChatImage = "";
+
+
 
   chatClient.setUser(
-    {
-      id: this.state.localChatID,
-      name: this.state.localChatname,
-      image: this.state.localChatImage
-    },
-    this.state.localChatToken
+  {
+    id: localChatID,
+    name: localChatname,
+    image: localChatImage
+  },
+  localChatToken
   );
 
-export class Chatter extends Component {
-  constructor() {
-    super();
-    this.state = {
-      localChatToken: "",
-      localChatname: "",
-      localChatID: "",
-      localChatImage: "",
-    }
+  const channel = chatClient.channel("livestream", "spacex", {
+  image: "https://goo.gl/Zefkbx",
+  name: "SpaceX launch discussion"
+  });
+
+  DBtolocal = () => {
+    var userRef = db.collection("users").doc(fire.auth().currentUser.email);
+    var username = fire.auth().currentUser.email;
+      userRef.onSnapshot(
+        {
+          includeMetadataChanges: true
+        },
+        function(doc) {
+          try {
 
 
-  };
-  componentWillUnmount() {
-    this._isMounted = false;
-  }
+              localChatID = doc.data().chatID;
+              localChatImage = doc.data().chatImage;
+              localChatname =  doc.data().chatName;
+              localChatToken = doc.data().chatToken;
 
-  componentDidMount() {
-    this._isMounted = true;
 
-    let currentComp = this;
-
-    fire.auth().onAuthStateChanged(function (user) {
-      if (user) {
-        var found = 0;
-        var userRef = db.collection("users").doc(fire.auth().currentUser.email);
-        var username = fire.auth().currentUser.email;
-        userRef.onSnapshot(
-          {
-            includeMetadataChanges: true
-          },
-          function (doc) {
-            try {
-              currentComp.setState({
-              localChatID : doc.data().chatID,
-                localChatImage : doc.data().chatImage,
-                localChatname : doc.data().chatName,
-                localChatToken : doc.data().chatToken,
-                })
           } catch (error) {
-              console.log("We getting an error: ", error);
-              found = 0;
-            }
+            console.log("We getting an error: ", error);
+            found = 0;
           }
-        );
-
-        if (found == 1) {
-          //console.log("does hit this")
-        } else {
-          currentComp.setState({
-            budget: ["N/A"]
-          });
         }
-      }
-    });
-  };
-
-  render() {
-
-    return (<div>
-      <Chat client={chatClient} theme={"livestream dark"}>
-        <Channel channel={channel} Message={MessageLivestream}>
-          <Window hideOnThread>
-            <ChannelHeader live />
-            <MessageList />
-            <MessageInput Input={MessageInputSmall} focus />
-          </Window>
-          <Thread fullWidth />
-        </Channel>
-      </Chat>
-    </div>
-    );
+      );
   }
-};
+
+
+
+
+
+
+const Chatter = () => (
+  DBtolocal();
+<Chat client={chatClient} theme={"livestream dark"}>
+  <Channel channel={channel} Message={MessageLivestream}>
+    <Window hideOnThread>
+      <ChannelHeader live />
+      <MessageList />
+      <MessageInput Input={MessageInputSmall} focus />
+    </Window>
+    <Thread fullWidth />
+  </Channel>
+</Chat>
+);
 
 export default Chatter;
